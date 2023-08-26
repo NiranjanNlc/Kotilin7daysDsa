@@ -48,7 +48,7 @@ class CommonElementsTest {
         val array2 = intArrayOf(5, 10, 10, 15)
         val array3 = intArrayOf(5, 10, 10, 20)
 
-        val expectedCommonElements = intArrayOf(10, 10)
+        val expectedCommonElements = intArrayOf(5,10, 10)
         val commonElements = findCommonElements(array1, array2, array3)
 
         assertArrayEquals(expectedCommonElements, commonElements)

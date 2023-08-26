@@ -23,5 +23,11 @@ appearing 2nd time consecutively.
 'a' at fifth position is appearing
 2nd time consecutively.*/
 fun removeConsecutiveDuplicates(input: String): String {
-   return arrayOf<Char>().toString()
+   var required = StringBuilder()
+   for ( ch in input)
+   {
+      if( required.isEmpty() || ch != required.last())
+         required.append(ch)
+   }
+   return required.toString()
 }

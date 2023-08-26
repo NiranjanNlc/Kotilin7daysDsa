@@ -16,10 +16,21 @@ For x = 5:    floor  = 2,  ceil  = 8
 For x = 20:   floor  = 19,  ceil doesn't exist in array
  */
 fun findFloor(arr: IntArray, x: Int): Int {
-
-    return -1
+    val index = arr.binarySearch(x)
+    if (index >= 0) {
+        return arr[index]
+    } else {
+        val insertionPoint = -index - 1
+        return if (insertionPoint == 0) -1 else arr[insertionPoint - 1]
+    }
 }
 
 fun findCeil(arr: IntArray, x: Int): Int {
-    return -1
+    val index = arr.binarySearch(x)
+    if (index >= 0) {
+        return arr[index]
+    } else {
+        val insertionPoint = -index - 1
+        return if (insertionPoint < arr.size) arr[insertionPoint] else -1
+    }
 }

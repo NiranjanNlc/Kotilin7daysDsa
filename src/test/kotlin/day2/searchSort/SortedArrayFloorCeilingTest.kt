@@ -11,7 +11,7 @@ class FloorCeilingTest {
         val array = intArrayOf(1, 2, 8, 10, 10, 12, 19)
         val x = 0
 
-        val expectedFloor = 1
+        val expectedFloor = -1
         val floor = findFloor(array, x)
 
         assertEquals(expectedFloor, floor)
@@ -54,10 +54,8 @@ class FloorCeilingTest {
     fun testFloorForGreaterValue() {
         val array = intArrayOf(1, 2, 8, 10, 10, 12, 19)
         val x = 20
-
         val expectedFloor = 19
         val floor = findFloor(array, x)
-
         assertEquals(expectedFloor, floor)
     }
 

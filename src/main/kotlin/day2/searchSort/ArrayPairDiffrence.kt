@@ -13,5 +13,10 @@ Output: No Such Pair
  */
 fun hasPairWithDifference(arr: IntArray, n: Int): Boolean {
 
+    for (i in arr )
+    {
+        var complement = i - n
+        if (arr.contains(complement)) return true
+    }
     return false
 }

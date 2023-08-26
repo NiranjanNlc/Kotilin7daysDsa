@@ -18,7 +18,7 @@ class ArrayPermuteTest
         val a = intArrayOf(1, 2, 2, 1)
         val b = intArrayOf(3, 3, 3, 4)
         val k = 5
-        assertFalse(canPermuteSatisfyCondition(a, b, k))
+        assertTrue(acanPermuteSatisfyCondition(a, b, k))
     }
 
     @Test

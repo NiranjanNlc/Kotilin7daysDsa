@@ -9,5 +9,11 @@ The task is to print “Yes” if any such permutation exists, otherwise print �
  */
 fun canPermuteSatisfyCondition(a: IntArray, b: IntArray, k: Int): Boolean {
 
+    if (a.size != b.size)
+        return false
+    for (i in a.indices)
+    {
+        if ((a[i]+b[i])>=k ) return true
+    }
     return false
 }

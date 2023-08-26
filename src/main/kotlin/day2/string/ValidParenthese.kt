@@ -17,7 +17,41 @@ Example 3:
 Input: s = "(]"
 Output: false*/
  fun isValid(s: String): Boolean {
+     var stack = ArrayDeque<Char>()
+    for (ch in s )
+    {
+        when(ch)
+        {
+            '(','{','[' ->
+            {
+                stack.addLast(ch)
+            }
+            ')'->
+            {
+                if (stack.isEmpty() || stack.last()!= '(' )
+                {
+                    return false
+                }
+                stack.removeLast()
+            }
+            '}'->
+            {
+                if (stack.isEmpty() || stack.last()!= '{' )
+                {
+                    return false
+                }
+                stack.removeLast()
+            }
+            ']'->
+            {
+                if (stack.isEmpty() || stack.last()!= '[' )
+                {
+                    return false
+                }
+                stack.removeLast()
+            }
+        }
+    }
 
-
-    return false
+    return true
 }

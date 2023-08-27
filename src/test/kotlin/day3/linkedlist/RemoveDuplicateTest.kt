@@ -6,7 +6,7 @@ import org.junit.Test
 import org.junit.Assert.assertEquals
 
 
-class RemoveDuplicatesTest {
+class RemoveDuplicateTest {
 
     @Test
     fun testRemoveDuplicatesWithDuplicates() {

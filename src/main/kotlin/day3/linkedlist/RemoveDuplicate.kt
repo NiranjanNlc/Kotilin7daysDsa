@@ -6,6 +6,7 @@ fun removeDuplicates(head: LinkedListNode?): LinkedListNode? {
     // Implementation of removeDuplicates function
     var curent = head
     var value = mutableListOf<Int>()
+    curent?.let { value.add(it.value) }
     while (curent!= null)
     {
         var next = curent.nextNode
@@ -13,6 +14,7 @@ fun removeDuplicates(head: LinkedListNode?): LinkedListNode? {
         {
             curent.nextNode = next?.nextNode
         }else{
+            next?.let { value.add(it.value) }
             curent = next
         }
 

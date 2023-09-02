@@ -1,5 +1,6 @@
 package day7
 
+class DigitSwapChecker {
 // Function to check if a list of numbers can be sorted by swapping adjacent elements
 fun canSortBySwapping(numbers: MutableList<Int>): Boolean {
     // If the list is already sorted, return true
@@ -75,4 +76,5 @@ fun trySwap(num: Int, numNext: Int): Int? {
 
     // If no valid swap results in a smaller number, return null
     return null
+}
 }
